@@ -612,3 +612,61 @@ Processing by SongsController#show as HTML
   [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
   Rendered songs/show.html.erb within layouts/application (14.2ms)
 Completed 200 OK in 46ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArtist Load (0.8ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 1], ["title", "Mr. Brightside"], ["created_at", "2017-01-01 13:15:10.490738"], ["updated_at", "2017-01-01 13:15:10.490738"]]
+  [1m[36m (199.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.4ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 1], ["title", "Jenny Was a Friend of Mine"], ["created_at", "2017-01-01 13:15:10.701439"], ["updated_at", "2017-01-01 13:15:10.701439"]]
+  [1m[36m (176.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.6ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Tommy Tutone"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 2], ["title", "Jenny"], ["created_at", "2017-01-01 13:15:10.887461"], ["updated_at", "2017-01-01 13:15:10.887461"]]
+  [1m[36m (192.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.5ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 3], ["title", "Around the World"], ["created_at", "2017-01-01 13:15:11.088988"], ["updated_at", "2017-01-01 13:15:11.088988"]]
+  [1m[36m (199.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.5ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 3], ["title", "Harder, Better, Faster, Stronger"], ["created_at", "2017-01-01 13:15:11.297579"], ["updated_at", "2017-01-01 13:15:11.297579"]]
+  [1m[36m (179.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.5ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Where is My Mind?"], ["created_at", "2017-01-01 13:15:11.486254"], ["updated_at", "2017-01-01 13:15:11.486254"]]
+  [1m[36m (283.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.7ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Gigantic"], ["created_at", "2017-01-01 13:15:11.779478"], ["updated_at", "2017-01-01 13:15:11.779478"]]
+  [1m[36m (177.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.5ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Monkey Gone to Heaven"], ["created_at", "2017-01-01 13:15:11.965332"], ["updated_at", "2017-01-01 13:15:11.965332"]]
+  [1m[36m (202.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/artists/1/songs" for 127.0.0.1 at 2017-01-01 19:59:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[35mArtist Load (0.8ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ?  ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSong Load (1.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 1112ms (Views: 873.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/artists/100/songs" for 127.0.0.1 at 2017-01-01 19:59:33 +0300
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"100"}
+  [1m[35mArtist Load (0.6ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ?  ORDER BY "artists"."id" ASC LIMIT 1  [["id", 100]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2017-01-01 19:59:33 +0300
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.5ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.5ms)
